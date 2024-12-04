@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend quiz app">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend quiz app</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script defer src="./assets/js/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="selected-topic">
+      <div class="selected-img"></div>
+      <p class="selected-title"></p>
+    </div>
+    <div class="toggle-switch">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">
+        <path fill="#626C7F"
+          d="M12 1.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 1 1-1.5 0v-1.5A.75.75 0 0 1 12 1.5Zm0 15a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0-1.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm9.75-2.25a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 1 0 0 1.5h1.5ZM12 19.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 1 1-1.5 0v-1.5a.75.75 0 0 1 .75-.75Zm-8.25-6.75a.75.75 0 1 0 0-1.5h-1.5a.75.75 0 1 0 0 1.5h1.5Zm.969-8.031a.75.75 0 0 1 1.062 0l1.5 1.5a.751.751 0 0 1-1.062 1.062l-1.5-1.5a.75.75 0 0 1 0-1.062Zm1.062 14.562a.75.75 0 1 1-1.062-1.06l1.5-1.5a.75.75 0 1 1 1.062 1.06l-1.5 1.5Zm13.5-14.562a.75.75 0 0 0-1.062 0l-1.5 1.5a.751.751 0 0 0 1.062 1.062l1.5-1.5a.75.75 0 0 0 0-1.062Zm-1.062 14.562a.75.75 0 0 0 1.062-1.06l-1.5-1.5a.75.75 0 0 0-1.062 1.06l1.5 1.5Z" />
+      </svg>
+      <div class="input-wrap">
+        <input type="checkbox" id="theme-toggle" class="toggle-switch-input"
+          aria-label="Toggle theme between light and dark mode" />
+        <label for="theme-toggle" class="toggle-switch-label">
+        </label>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24">
+        <path fill="#626C7F"
+          d="M11.775 4.522A7.5 7.5 0 1 1 4.898 16.09c2.104-.57 4.974-1.953 6.24-5.326.828-2.211.876-4.408.637-6.241ZM20.184 12a8.997 8.997 0 0 0-9.315-8.994.75.75 0 0 0-.713.888c.345 1.821.42 4.092-.424 6.342-1.2 3.201-4.203 4.26-6.115 4.606a.75.75 0 0 0-.542 1.066A9 9 0 0 0 20.184 12Z" />
+      </svg>
+    </div>
+  </header>
+  <main>
+    <section class="quiz-menu">
+      <article class="title">
+        <h1>
+          <span class="welcome">Welcome to the</span><br>
+          <span class="frontend">Frontend Quiz!</span>
+        </h1>
+        <p>Pick a subject to get started.</p>
+      </article>
+      <div class="quiz-subject">
+        <ul class="quiz-box">
+          <li class="chose"><img src="./assets/images/svg/icon-html.svg" alt="Icon of html" class="orange">
+            <h2 class="chose-subject">HTML</h2>
+          </li>
+          <li class="chose"><img src="./assets/images/svg/icon-css.svg" alt="Icon of CSS" class="green">
+            <h2 class="chose-subject">CSS</h2>
+          </li>
+          <li class="chose"><img src="./assets/images/svg/icon-js.svg" alt="Icon of JavaScript" class="blue">
+            <h2 class="chose-subject">JavaScript</h2>
+          </li>
+          <li class="chose"><img src="./assets/images/svg/icon-accessibility.svg" alt="Icon of Accessibility"
+              class="purple">
+            <h2 class="chose-subject">Accessibility</h2>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="quiz-question hidden">
+      <article class="title-question">
+        <p class="num-question"></p>
+        <h3 class="questions"></h3>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </article>
+      <div class="quiz-answer">
+        <ul class="quiz-box">
+          <li class="chose-answer">
+            <div class="chose-wrap">
+              <p class="letter">A</p>
+              <h4 class="answers"></h4>
+            </div>
+            <p class="result hidden"><img src="./assets/images/svg/icon-correct.svg" alt="icon correct"></p>
+            <p class="result hidden incorrect"><img src="./assets/images/svg/icon-incorrect.svg" alt="icon incorrect"></p>
+          </li>
+          <li class="chose-answer">
+            <div class="chose-wrap">
+              <p class="letter">B</p>
+              <h4 class="answers"></h4>
+            </div>
+            <p class="result hidden"><img src="./assets/images/svg/icon-correct.svg" alt="icon correct"></p>
+            <p class="result hidden incorrect"><img src="./assets/images/svg/icon-incorrect.svg" alt="icon incorrect"></p>
+          </li>
+          <li class="chose-answer">
+            <div class="chose-wrap">
+              <p class="letter">C</p>
+              <h4 class="answers"></h4>
+            </div>
+            <p class="result hidden"><img src="./assets/images/svg/icon-correct.svg" alt="icon correct"></p>
+            <p class="result hidden incorrect"><img src="./assets/images/svg/icon-incorrect.svg" alt="icon incorrect"></p>
+          </li>
+          <li class="chose-answer">
+            <div class="chose-wrap">
+              <p class="letter">D</p>
+              <h4 class="answers"></h4>
+            </div>
+            <p class="result hidden"><img src="./assets/images/svg/icon-correct.svg" alt="icon correct"></p>
+            <p class="result hidden incorrect"><img src="./assets/images/svg/icon-incorrect.svg" alt="icon incorrect"></p>
+          </li>
+          <button class="chose-button" id="submit">Submit Answer</button>
+          <button class="chose-button hidden" id="next-question">Next Question</button>
+        </ul>
+        <div class="not-selected hidden">
+          <img src="./assets/images/svg/icon-error.svg" alt="not selected">
+          <p>Please select an answer</p>
+        </div>
+      </div>
+    </section>
+    <section class="quiz-completed hidden">
+      <article class="title-completed">
+        <h2>
+          <span class="qc">Quiz completed</span><br>
+          <span class="score">You scored...</span>
+        </h2>
+      </article>
+      <div class="completed-wrap">
+        <div class="completed-topic">
+          <div class="completed-top">
+            <div class="completed-img">
+            </div>
+            <p class="completed-title"></p>
+          </div>
+          <h3 class="completed-score"></h3>
+          <p class="out-of">out of 10</p>
+        </div>
+        <button class="chose-button" id="play-again">Play Again</button>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
